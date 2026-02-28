@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for i in {0..9}
+do
+  start_imsi=$((1 + i * 50))
+  imsi=$(printf "imsi-001010%09d" $start_imsi)
+  sudo /home/user/UERANSIM/build/nr-ue \
+    -c /home/user/UERANSIM/config/open5gs-ue.yaml \
+    --imsi $imsi \
+    -n 50 &
+//위의 50을 수정하여 한 프로세스가 공격할 횟수를 지정함
+done
+
+wait
