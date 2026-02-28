@@ -1,2 +1,2 @@
-#21-2 Computer Programming
+#21-2_Computer_Programming
 전산학실습
